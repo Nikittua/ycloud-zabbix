@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+ yc_balance:
+  build: .
+  container_name: yc_balance
+  volumes:
+    - ./new_response.json:/yc_balance/new_response.json
+    - ./config/config.yaml:/root/.config/yandex-cloud/config.yaml
+  restart: always
